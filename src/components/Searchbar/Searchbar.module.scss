@@ -1,0 +1,72 @@
+.searchBar {
+  margin: 2rem 0;
+  @include flexCenter(row);
+  width: 100%;
+  border-bottom: 1px solid var(--primary-gray-color);
+  padding-bottom: 2rem;
+}
+
+.searchBox {
+  position: relative;
+  @include flexCenter(row);
+  justify-content: space-between;
+  border: 1px solid var(--primary-gray-color);
+  border-radius: 1rem;
+  width: 35rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin: 0 1rem;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:focus-within {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  }
+
+  @include respond-to("medium") {
+    width: 45rem;
+    border-radius: 4rem;
+  }
+
+  .searchIcon,
+  .resetIcon {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .searchIcon {
+    left: 1%;
+    padding-left: 1rem;
+  }
+
+  .resetIcon {
+    padding-right: 1rem;
+    right: 5%;
+  }
+
+  input {
+    @include truncated;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+    background: none;
+    margin-left: 5rem;
+    width: 83%;
+
+    &::-webkit-input-placeholder {
+      font-weight: bold;
+      opacity: 0.6;
+    }
+  }
+
+  input[type="text"],
+  textarea {
+    transition: all 0.2s ease;
+    outline: none;
+    margin: 0;
+    padding: 2.3rem 1rem 2rem 5rem;
+    border-radius: 3rem;
+  }
+}

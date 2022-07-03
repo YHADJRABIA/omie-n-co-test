@@ -55,6 +55,3 @@ const ProductList = () => {
 }
 
 export default ProductList
-function useSelector(arg0: (state: any) => any): { cart: any } {
-  throw new Error("Function not implemented.")
-}

@@ -39,6 +39,8 @@ const Product = ({ name, price, quantity, quantityUnit }: PropTypes) => {
             src="/product.png"
             alt="Image d'un produit alimentaire"
             title="Image d'un produit alimentaire"
+            placeholder="blur"
+            blurDataURL="https://www.omie.fr/_next/static/images/omie_logo_bleu-c3ff610a93298b2cb4efdbe64469bec3.png"
             objectFit="cover"
             width={180}
             height={240}

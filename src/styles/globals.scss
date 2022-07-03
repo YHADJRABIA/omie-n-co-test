@@ -1,0 +1,14 @@
+// @author Yacine Hadj Rabia
+
+@import "abstracts/variables";
+
+@import "base/reset", "base/typography";
+
+@import "components/notifications", "components/forms";
+
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}

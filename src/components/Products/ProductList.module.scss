@@ -1,0 +1,29 @@
+.productList {
+  width: 100%;
+  @include flexCenter(column);
+  @include respond-to("medium") {
+    @include flexCenter(row, flex-start, flex-start);
+    padding: 0 2rem;
+  }
+  .notFoundContainer {
+    margin: 0 auto;
+    margin-top: 15%;
+    text-align: center;
+    @include respond-to("medium") {
+      margin-top: 10%;
+    }
+
+    svg {
+      width: 30rem;
+      height: 30rem;
+      @include respond-to("medium") {
+        width: 50rem;
+        height: 50rem;
+      }
+    }
+  }
+
+  .notFound {
+    margin: 0 0.5rem;
+  }
+}

@@ -1,0 +1,147 @@
+.productCard {
+  width: 100%;
+  @include flexCenter(row, space-around);
+  margin-bottom: 2rem;
+
+  @include respond-to("small") {
+    &:not(:last-child) {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--primary-gray-color);
+    }
+  }
+
+  @include respond-to("medium") {
+    position: relative;
+    width: 25%;
+  }
+}
+
+.product {
+  @include flexCenter(row, center, flex-start);
+  width: 75%;
+  @include respond-to("medium") {
+    @include flexCenter(column, center);
+  }
+}
+
+.cartQuantity {
+  @include flexCenter(row);
+  z-index: 1;
+  color: var(--primary-white-color);
+  position: absolute;
+  width: 2rem;
+  height: 2.2rem;
+  top: -10%;
+  left: -17%;
+  background-color: var(--primary-black-color);
+  border-radius: 50%;
+  @include respond-to("medium") {
+    top: -4%;
+    left: -5%;
+    width: 3rem;
+    height: 3.2rem;
+    font-size: 1.4rem;
+  }
+  @include respond-to("large") {
+    top: -2%;
+    left: -3%;
+  }
+}
+
+.image {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid var(--primary-gray-color);
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  @include respond-to("small") {
+    margin: 0 1.5rem;
+
+    img {
+      width: 5rem !important;
+      height: 5rem !important;
+    }
+  }
+
+  @include respond-to("medium") {
+    width: 100%;
+    @include flexCenter(column, center);
+    margin-bottom: 1.6rem;
+  }
+}
+
+.info {
+  @include respond-to("small") {
+    width: 55%;
+  }
+  @include respond-to("medium") {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.name {
+  @include respond-to("small") {
+    @include multiLineEllipsis(1, 2);
+  }
+  margin-bottom: 1rem;
+}
+
+.subInfo {
+  font-weight: bold;
+  display: flex;
+  @include respond-to("medium") {
+    justify-content: center;
+  }
+}
+
+.price {
+  margin-right: 1rem;
+}
+
+.quantity {
+  color: var(--secondary-gray-color);
+}
+
+.cta {
+  cursor: pointer;
+  display: flex;
+
+  @include respond-to("small") {
+    margin-right: 1rem;
+    width: 21%;
+    @include flexCenter(row, flex-end);
+  }
+
+  @include respond-to("medium") {
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 15%;
+    right: 1rem;
+  }
+
+  @include respond-to("large") {
+    top: 22%;
+    right: 9%;
+  }
+}
+.minusIcon,
+.plusIcon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.plusIcon {
+  color: var(--secondary-blue-color);
+}
+
+.minusIcon {
+  color: var(--secondary-gray-color);
+
+  @include respond-to("small") {
+    margin-right: auto;
+  }
+  @include respond-to("medium") {
+    margin-top: 4rem;
+  }
+}

@@ -17,6 +17,7 @@
 }
 
 .product {
+  @include preventHighlight;
   @include flexCenter(row, center, flex-start);
   width: 75%;
   @include respond-to("medium") {
@@ -54,7 +55,6 @@
   border: 1px solid var(--primary-gray-color);
   border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
-
   @include respond-to("small") {
     margin: 0 1.5rem;
 
